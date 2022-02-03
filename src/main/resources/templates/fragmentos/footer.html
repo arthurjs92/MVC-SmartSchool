@@ -1,0 +1,54 @@
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+  <!-- Grid container -->
+  <div th:fragment="footer" class="container p-1">
+    <!-- Section: Social media -->
+    <div class="m-2">
+      <!-- Instagram -->
+      <a class="btn" href="#!" role="button"
+        ><img
+          src="../static/icons/instagram.svg"
+          th:attr="src=@{/icons/instagram.svg},title=#{logo},alt=#{logo}"
+      /></a>
+
+      <!-- Twitter -->
+      <a class="btn" href="#!" role="button"
+        ><img
+          src="../static/icons/twitter.svg"
+          th:attr="src=@{/icons/twitter.svg},title=#{logo},alt=#{logo}"
+      /></a>
+
+      <!-- Twitch -->
+      <a class="btn" href="#!" role="button"
+        ><img
+          src="../static/icons/twitch.svg"
+          th:attr="src=@{/icons/twitch.svg},title=#{logo},alt=#{logo}"
+      /></a>
+
+      <!-- Facebook -->
+      <a class="btn" href="#!" role="button"
+        ><img
+          src="../static/icons/facebook.svg"
+          th:attr="src=@{/icons/facebook.svg},title=#{logo},alt=#{logo}"
+      /></a>
+
+      <!-- Github -->
+      <a class="btn" href="#!" role="button"
+        ><img
+          src="../static/icons/github.svg"
+          th:attr="src=@{/icons/github.svg},title=#{logo},alt=#{logo}"
+      /></a>
+    </div>
+
+    <!-- Section: Text -->
+    <div>
+      <p>Endereço: Rua XX, número: XX - Bairro: Centro, Uberlândia.</p>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="text-center pb-3">
+    © 2021 Copyright:
+    <a class="text-white" href="# ">SmartSchool.com.br</a>
+  </div>
+</html>
+<!-- Footer -->
