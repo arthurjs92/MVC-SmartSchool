@@ -27,7 +27,7 @@ public class AdminAtualizaSalaController {
     @GetMapping (value = "cadastrosala")
     String cadastroSala(Model model){
         model.addAttribute("sala", new Sala());
-        return "cadastroSala";
+        return "cadastrosala";
     }
 
     @PostMapping (value = "cadastrosala")
