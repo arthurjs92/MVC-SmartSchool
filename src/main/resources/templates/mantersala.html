@@ -4,7 +4,7 @@
 ******************************************* -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" th:replace="fragmentos/layout">
-<div th:fragment="conteudo" class="container">
+<div th:fragment="conteudo" class="container pb-5 mb-1">
     <!-- insira seu código aqui -->
     <ul class="nav justify-content-center p-3">
         <li class="nav-item">
@@ -32,7 +32,10 @@
         <span th:text="${sucessmensage}">!</span>
     </div>
 
-    <form class="input-group mb-3" th:action="@{/mantersala}">
+    <form 
+     class="input-group pb-5" 
+     th:action="@{/mantersala}"
+     >
         <input type="text" class="form-control" placeholder="Codigo" th:name="identidadeSala" />
         <button class="btn btn-outline-secondary" id="button-addon2" type="submit">
             Procurar
@@ -56,12 +59,14 @@
             <span class="input-group-text">Local da Sala</span>
             <input type="text" aria-label="sala" class="form-control" th:field="*{local_sala}" />
         </div>
-        <div class="d-grid gap-2 col-3 mx-auto p-3">
-            <input type="submit" class="btn btn-primary btn-sm" formaction="/mantersala" value="Alterar">
-        </div>
-        <input type="hidden" th:name="sala" th:value="${sala?.cod_sala}">
-        <div class="d-grid col-3 mx-auto p-3">
-            <input type="submit" class="btn btn-danger btn-sm" formaction="/excluirsala" value="Apagar">
+        <div class="d-flex justify-content-center align-items-center mb-5">
+            <div class="p-3">
+                <input type="submit" class="btn btn-primary btn-lg" formaction="/mantersala" value="Alterar">
+            </div>
+            <input type="hidden" th:name="sala" th:value="${sala?.cod_sala}">
+            <div class="p-3">
+                <input type="submit" class="btn btn-danger btn-lg" formaction="/excluirsala" value="Apagar">
+            </div>
         </div>
     </form>
 
