@@ -8,11 +8,12 @@
     <!-- insira seu código aqui -->
     <ul class="nav justify-content-center p-3">
       <li class="nav-item">
-        <a class="nav-link" href="/cadastrosala" style="
-                        background-color: #e6e6fa;
-                        border-radius: 25px;
-                        margin: 8px;
-                    ">Cadastrar Aluno</a>
+        <a
+          class="nav-link"
+          href="/cadastrosala"
+          style="background-color: #e6e6fa; border-radius: 25px; margin: 8px"
+          >Cadastrar Aluno</a
+        >
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/cadastroprofessor">Cadastrar Professores</a>
@@ -36,7 +37,12 @@
       <span th:text="${sucessmensage}">!</span>
     </div>
 
-    <form th:action="@{/cadastroaluno}" method="POST" th:object="${aluno}" class="mb-5">
+    <form
+      th:action="@{/cadastroaluno}"
+      method="POST"
+      th:object="${aluno}"
+      class="mb-5"
+    >
       <div class="input-group">
         <span class="input-group-text">Login</span>
         <input
@@ -310,7 +316,11 @@
         th:errors="*{telefonePai}"
       ></div>
       <div class="d-grid gap-2 col-sm-2 mx-auto pb-5">
-        <input class="btn btn-primary btn-lg mt-3  ml-3" value="Cadastrar" type="submit" />
+        <input
+          class="btn btn-primary btn-lg mt-3 ml-3"
+          value="Cadastrar"
+          type="submit"
+        />
       </div>
     </form>
   </div>

@@ -4,76 +4,94 @@
 ******************************************* -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" th:replace="fragmentos/layout">
-<div th:fragment="conteudo" class="container">
+  <div th:fragment="conteudo" class="container">
     <!-- insira seu código aqui -->
     <ul class="nav justify-content-center p-3">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/cadastroaluno">Cadastrar Aluno</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/cadastroprofessor">Cadastrar Professores</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/cadastrosala" style="
-                        background-color: #e6e6fa;
-                        border-radius: 25px;
-                        margin: 8px;
-                    ">Cadastrar Salas de Aula</a>
-        </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/cadastroaluno"
+          >Cadastrar Aluno</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/cadastroprofessor">Cadastrar Professores</a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="/cadastrosala"
+          style="background-color: #e6e6fa; border-radius: 25px; margin: 8px"
+          >Cadastrar Salas de Aula</a
+        >
+      </li>
     </ul>
-    <div class="alert alert-danger" role="alert" th:if="${!#strings.isEmpty(dangermensage)}">
-        <span th:text="${dangermensage}">!</span>
-    </div>
-    <div class="alert alert-success" role="alert" th:if="${!#strings.isEmpty(sucessmensage)}">
-        <span th:text="${sucessmensage}">!</span>
-    </div>
-    <form 
-      action="" 
-      th:action="@{/cadastrosala}" 
-      method="POST" 
-      th:object="${sala}"
-      class="pb-4" 
+    <div
+      class="alert alert-danger"
+      role="alert"
+      th:if="${!#strings.isEmpty(dangermensage)}"
     >
-        <div class="input-group">
-            <span class="input-group-text">Turma</span>
-            <input 
-              type="text" 
-              aria-label="Código" class="form-control" 
-              th:field="*{turma}" 
-              required
-            />
-        </div>
-        <div class="input-group">
-            <span class="input-group-text">Código da Sala</span>
-            <input 
-              type="number" 
-              aria-label="Código" class="form-control" 
-              th:field="*{cod_sala}" 
-              required
-            />
-        </div>
-        <div class="input-group">
-            <span class="input-group-text">Qtd. Alunos</span>
-            <input 
-              type="number" 
-              aria-label="Qtd" class="form-control" 
-              th:field="*{qtd_alunos}" 
-              required
-            />
-        </div>
-        <div class="input-group">
-            <span class="input-group-text">Local da Sala</span>
-            <input 
-              type="text" 
-              aria-label="sala" class="form-control" 
-              th:field="*{local_sala}" 
-              required
-            />
-        </div>
-        <div class="d-grid gap-2 col-sm-2 mx-auto pb-5">
-            <input class="btn btn-primary btn-lg mt-4 ml-3" value="Cadastrar" type="submit" />
-        </div>
+      <span th:text="${dangermensage}">!</span>
+    </div>
+    <div
+      class="alert alert-success"
+      role="alert"
+      th:if="${!#strings.isEmpty(sucessmensage)}"
+    >
+      <span th:text="${sucessmensage}">!</span>
+    </div>
+    <form
+      action=""
+      th:action="@{/cadastrosala}"
+      method="POST"
+      th:object="${sala}"
+      class="pb-4"
+    >
+      <div class="input-group">
+        <span class="input-group-text">Turma</span>
+        <input
+          type="text"
+          aria-label="Código"
+          class="form-control"
+          th:field="*{turma}"
+          required
+        />
+      </div>
+      <div class="input-group">
+        <span class="input-group-text">Código da Sala</span>
+        <input
+          type="number"
+          aria-label="Código"
+          class="form-control"
+          th:field="*{cod_sala}"
+          required
+        />
+      </div>
+      <div class="input-group">
+        <span class="input-group-text">Qtd. Alunos</span>
+        <input
+          type="number"
+          aria-label="Qtd"
+          class="form-control"
+          th:field="*{qtd_alunos}"
+          required
+        />
+      </div>
+      <div class="input-group">
+        <span class="input-group-text">Local da Sala</span>
+        <input
+          type="text"
+          aria-label="sala"
+          class="form-control"
+          th:field="*{local_sala}"
+          required
+        />
+      </div>
+      <div class="d-grid gap-2 col-sm-2 mx-auto pb-5">
+        <input
+          class="btn btn-primary btn-lg mt-4 ml-3"
+          value="Cadastrar"
+          type="submit"
+        />
+      </div>
     </form>
-</div>
-
+  </div>
 </html>
